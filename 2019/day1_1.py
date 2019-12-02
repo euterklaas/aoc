@@ -1,10 +1,18 @@
-#!/usr/bin/env python3
+#!/bin/env python3
 
-inputFile = 'day1_1.input'
-frequency = 0
+input = 'day1_1.input'
 
-with open(inputFile) as f:
-     for line in f:
-         frequency = frequency + ( int(line) )
+total = 0
 
-print(frequency)
+def truncate(n, decimals=0):
+    multiplier = 10 ** decimals
+    return int(n * multiplier) / multiplier
+
+with open(input) as f:
+    for mass in f:
+        fuel = int(mass) / 3
+        roundedFuel = truncate(fuel)
+        finalFuel = roundedFuel - 2
+        total += finalFuel
+
+print(total)
