@@ -22,13 +22,4 @@ with open(input) as f:
                 if fuel > 0:
                     total += fuel
                 print(fuel)
-#            addedFuel = 1
-#            additionalFuel = 0
-#            while addedFuel > 0:
-#                moreFuel = int(finalFuel) / 3
-#                roundedMoreFuel = truncate(moreFuel)
-#                addedFuel = roundedMoreFuel - 2
-#                additionalFuel += addedFuel
-#                total += additionalFuel
-#                print(addedFuel)
 print(total)
